@@ -1,0 +1,28 @@
+{
+  "name": "petstore-api-bdd-tests",
+  "version": "1.0.0",
+  "description": "BDD tests for Petstore API using Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require 'features/**/*.ts' --format progress-bar --format json:reports/cucumber-report.json && node reporter.js",
+    "test:report": "cucumber-js --require-module ts-node/register --require 'features/**/*.ts' --format json:reports/cucumber-report.json && node reporter.js"
+  },
+  "keywords": [
+    "bdd",
+    "cucumber",
+    "api-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@cucumber/html-formatter": "^21.10.0",
+    "@types/chai": "^5.2.1",
+    "@types/node": "^20.11.24",
+    "axios": "^1.6.7",
+    "chai": "^4.3.10",
+    "cucumber-html-reporter": "^7.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
